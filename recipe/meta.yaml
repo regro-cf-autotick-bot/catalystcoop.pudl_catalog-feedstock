@@ -17,13 +17,13 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8,<3.11
+    - python >=3.8,<3.12
     - setuptools-scm
   run:
-    - python >=3.8,<3.11
-    - gcsfs >=2021.7,<2022.8.3
+    - python >=3.8,<3.12
+    - gcsfs >=2021.7,<2022.11.1
     - intake-parquet >=0.2.3,<0.3
-    - intake-sqlite >=0.1.2
+    - intake-sqlite >=0.2.0
     - msgpack-python >=1,<2
 
 test:
