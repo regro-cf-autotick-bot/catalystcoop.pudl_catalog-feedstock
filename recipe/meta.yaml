@@ -25,6 +25,8 @@ requirements:
     - intake-parquet >=0.2.3,<0.3
     - intake-sqlite >=0.2.0
     - msgpack-python >=1,<2
+    - boto3 ==1.24.59
+    - s3fs >=2021.7,<2022.11.1
 
 test:
   imports:
