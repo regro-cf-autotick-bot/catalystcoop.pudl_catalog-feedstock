@@ -1,5 +1,5 @@
 {% set name = "catalystcoop.pudl_catalog" %}
-{% set version = "0.2.0" %}
+{% set version = "2022.11.30" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/catalystcoop.pudl_catalog-{{ version }}.tar.gz
-  sha256: 20f37e1c07a5a8e4db38e4c892d70c01045b59423d15946eac78c10c04a8cb3b
+  sha256: dd6eb51d3c1a7d781b7585657b55fc8ba4589da74a1aac2d016050cd2b3c8276
 
 build:
   noarch: python
