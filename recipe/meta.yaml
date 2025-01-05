@@ -6,21 +6,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/catalystcoop.pudl_catalog-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/catalystcoop.pudl_catalog-{{ version }}.tar.gz
   sha256: dd6eb51d3c1a7d781b7585657b55fc8ba4589da74a1aac2d016050cd2b3c8276
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.8,<3.12
+    - python {{ python_min }}
     - setuptools-scm
   run:
-    - python >=3.8,<3.12
+    - python >={{ python_min }},<3.12
     - gcsfs >=2021.7,<2022.11.1
     - intake-parquet >=0.2.3,<0.3
     - intake-sqlite >=0.2.0
@@ -35,6 +35,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/catalyst-cooperative/pudl-catalog
